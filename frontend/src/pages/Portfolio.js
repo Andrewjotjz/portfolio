@@ -150,12 +150,12 @@ export default function Portfolio() {
       { name: "Notion", description: "Project planning and notes", icon: "📝" },
       { name: "JIRA", description: "Agile project management", icon: "📊" },
       { name: "Figma", description: "UI/UX design and prototyping", icon: "🎨" },
-      { name: "Slack", description: "Team communication", icon: "💬" },
+      { name: "Lucidchart", description: "UML design, workflow navigation and routing plan", icon: "💬" },
     ],
     learning: [
+      { name: "Coursera", description: "Online courses and certifications", icon: "❓" },
       { name: "YouTube", description: "Tech tutorials and conferences", icon: "📺" },
       { name: "GitHub", description: "Open source exploration", icon: "🌟" },
-      { name: "Stack Overflow", description: "Problem solving community", icon: "❓" },
       { name: "Dev.to", description: "Developer articles and insights", icon: "📚" },
     ],
   }
@@ -176,8 +176,8 @@ export default function Portfolio() {
       challenges: "Managing complex user permissions and ensuring real-time updates across multiple user roles.",
       solution: "Implemented JWT-based authentication with role middleware and WebSocket connections for live updates.",
       improvements: "Would add automated testing suite and implement caching for better performance.",
-      demo: "https://procurement-demo.com",
-      github: "https://github.com/andrewjotjz/procurement-system",
+      demo: "https://empirecbs.onrender.com/",
+      github: "https://github.com/Andrewjotjz/empire-pms",
       screenshots: ["/placeholder.svg?height=300&width=500", "/placeholder.svg?height=300&width=500"],
     },
     {
@@ -320,11 +320,12 @@ export default function Portfolio() {
               </button>
             </div>
             <div className="flex justify-center space-x-6">
-              <a href="https://github.com/Andrewjotjz" className="text-gray-600 hover:text-blue-600 transition-colors">
+              <a href="https://github.com/Andrewjotjz" target="_blank" className="text-gray-600 hover:text-blue-600 transition-colors">
                 <Github size={24} />
               </a>
               <a
                 href="https://www.linkedin.com/in/andrew-jmin-zeat-jot-36b48b134"
+                target="_blank"
                 className="text-gray-600 hover:text-blue-600 transition-colors"
               >
                 <Linkedin size={24} />
@@ -539,7 +540,10 @@ export default function Portfolio() {
                       ))}
                     </ul>
                   </div>
-                  <button className="flex items-center text-blue-600 hover:text-blue-700 font-semibold">
+                  <button 
+                    className="flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+                    onClick={() => scrollToSection("deepdives")}
+                  >
                     View Details <ExternalLink size={16} className="ml-1" />
                   </button>
                 </div>
@@ -636,7 +640,7 @@ export default function Portfolio() {
       </section>
 
       {/* Enhanced Projects Section with Deep Dives */}
-      <section className="py-20 bg-white">
+      <section id="deepdives" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Project Deep Dives</h2>
@@ -695,6 +699,7 @@ export default function Portfolio() {
                       {project.demo && (
                         <a
                           href={project.demo}
+                          target="_blank"
                           className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
                         >
                           <Play size={16} className="mr-2" />
@@ -704,6 +709,7 @@ export default function Portfolio() {
                       {project.github && (
                         <a
                           href={project.github}
+                          target="_blank"
                           className="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors flex items-center"
                         >
                           <Github size={16} className="mr-2" />
@@ -846,11 +852,11 @@ export default function Portfolio() {
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="text-blue-600" size={24} />
+                <Linkedin className="text-blue-600" size={24} />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
-              <a href="tel:+61435303047" className="text-blue-600 hover:text-blue-700">
-                +61 435 303 047
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/andrew-jmin-zeat-jot-36b48b134/" target="_blank" className="text-blue-600 hover:text-blue-700">
+                Andrew Jmin Zeat Jot
               </a>
             </div>
             <div className="text-center">
@@ -858,7 +864,7 @@ export default function Portfolio() {
                 <Github className="text-blue-600" size={24} />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">GitHub</h3>
-              <a href="https://github.com/Andrewjotjz" className="text-blue-600 hover:text-blue-700">
+              <a href="https://github.com/Andrewjotjz" target="_blank" className="text-blue-600 hover:text-blue-700">
                 @Andrewjotjz
               </a>
             </div>
